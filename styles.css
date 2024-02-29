@@ -1,0 +1,46 @@
+:root {
+    --keyboard-height: 200px
+}
+
+.keyboard {
+    height: var(--keyboard-height);
+    width: 100%;
+    margin: 0 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.keyboard-row {
+    display: flex;
+    width: 100%;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+    justify-content: center;
+}
+
+.keyboard-button {
+    height: 58px;
+    max-width: 44px;
+    margin: 0 6px 0 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.keyboard-button:last-child {
+    margin-right: 0;
+}
+
+.keyboard-enter {
+    max-width: 80px;
+}
+.keyboard-del {
+    max-width: 80px;
+}
