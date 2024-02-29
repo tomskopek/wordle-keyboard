@@ -1,8 +1,9 @@
 function calculateKeyboardKeyWidth() {
     const keyboardRowWidth = document.querySelector(".keyboard-row").offsetWidth;
     const maxKeysInRow = 10;
-    const margin = 6;
-    return (keyboardRowWidth - (8 * 2) - margin * (maxKeysInRow - 1)) / maxKeysInRow;
+    const keyMargin = 6;
+    const rowMargin = 8;
+    return (keyboardRowWidth - (rowMargin * 2) - keyMargin * (maxKeysInRow - 1)) / maxKeysInRow;
 }
 
 function setKeyboardKeyWidth(width) {
@@ -10,9 +11,9 @@ function setKeyboardKeyWidth(width) {
     keys.forEach(key => {
         key.style.width = `${width}px`;
     });
-    const deleteButton = document.getElementById("backspace");
-    // del and enter button can take up 1 extra key between the two of them
 
+    // del and enter button can take up 1 extra key between the two of them since that row has 9 keys total
+    const deleteButton = document.getElementById("backspace");
     deleteButton.style.width = `${width * 1.5}px`;
     const enterButton = document.getElementById("enter");
     enterButton.style.width = `${width * 1.5}px`;
